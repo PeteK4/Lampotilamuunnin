@@ -31,7 +31,7 @@ function muunnaLampotila(){
     if (tyyppi == "CelsiusFahrenheit") {
         // Tarkista ettei mennä alle absoluuttisen nollapisteen
         if (arvo < -273.15) {
-            tulosRuutu.innerHTML = `${alitus()} -273.15 &degC.`;
+            tulosRuutu.innerHTML = `${alitus()} -273.15 &degC`;
         return;
         }
         // Muunnoskaava ja hyppy tulostus funktioon (muuntotyyppi, muunnettu lämpötila, desimaalien määrä)
@@ -63,7 +63,7 @@ function muunnaLampotila(){
     // Muunna Fahrenheit > Kelvin
     } else if (tyyppi == "FahrenheitKelvin") {
         if (arvo < -459.67) {
-            tulosRuutu.innerHTML = `${alitus()} -459.67 &degF.`;
+            tulosRuutu.innerHTML = `${alitus()} -459.67 &degF`;
         return;
         }
         // Muunnoskaava ja hyppy tulosta funktioon
