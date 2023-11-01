@@ -19,7 +19,7 @@ function muunnaLampotila(){
     if (arvo == "" || isNaN(arvo)) {
         let txt = document.getElementById("tulosruutu");
         txt.style.color = "#ffeeaa";
-        txt.style.fontSize = "2.25em";
+        txt.style.fontSize = "1.8em";
             if (isNaN(arvo)) {
             tulosRuutu.innerHTML = "Virheellinen syöte.<br>Piste toimii desimaalierotimena."
             } else {
