@@ -70,6 +70,11 @@ button {
   margin-left: 20px;
   width: 70px;
   height: 30px;
+  transition-duration: .1s;
+}
+
+button:hover {
+  transform: scale(110%);
 }
 
 /* Lämpötilojen kysely */
