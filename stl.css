@@ -12,7 +12,7 @@ body {
 
 .kentat {
   color: #222;
-  margin-left: 20%;
+  margin-left: 10%;
 }
 
 h1 {
@@ -67,7 +67,7 @@ button {
   border-color: #ffffff;
   border-style:solid;
   border-radius: 15px;
-  margin-left: 20px;
+  margin-left: 10px;
   width: 70px;
   height: 30px;
   transition-duration: .1s;
