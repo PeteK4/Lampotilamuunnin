@@ -20,7 +20,11 @@ function muunnaLampotila(){
         let txt = document.getElementById("tulosruutu");
         txt.style.color = "#ffeeaa";
         txt.style.fontSize = "2.25em";
-        tulosRuutu.innerHTML = "Syöte on virheellinen.<br>Anna lukuarvo.<br>Piste toimii desimaalierotimena."
+            if (isNaN(arvo)) {
+            tulosRuutu.innerHTML = "Virheellinen syöte.<br>Piste toimii desimaalierotimena."
+            } else {
+            tulosRuutu.innerHTML = "<br>Lämpötila puuttuu."
+            }
         return;
         }
 
@@ -34,7 +38,7 @@ function muunnaLampotila(){
             tulosRuutu.innerHTML = `${alitus()} -273.15 &degC`;
         return;
         }
-        // Muunnoskaava ja hyppy tulostus funktioon (muuntotyyppi, muunnettu lämpötila, desimaalien määrä)
+        // Muunnoskaava ja hyppy tulostus funktioon (muuntotyyppi, syötekentän arvo, muunnettu arvo, desimaalien määrä)
         muunnos = (arvo * 9 / 5) + 32;
         tulosta(tyyppi, alkuarvo, muunnos, desit);
 
