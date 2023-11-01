@@ -157,7 +157,7 @@ function tulosta(tyyppi, alkuarvo, muunnos, desit) {
         if (muunnos_fix < -459.67 && desit == 1) {
             muunnos_fix = -459.6;
         } 
-        if (muunnos_fix < -459.67 &&desit == 2) {
+        if (muunnos_fix < -459.67 && desit == 2) {
             muunnos_fix = -459.67;
         }
         if (muunnos_fix < -459.67 && desit == 3) {
