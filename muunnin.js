@@ -102,7 +102,7 @@ function muunnaLampotila(){
 function alitus(){
     let txt = document.getElementById("tulosruutu");
     txt.style.color = "#ffeeaa";
-    txt.style.fontSize = "2.3em";
+    txt.style.fontSize = "2em";
     return teksti = 'Lämpötila ei voi alittaa<br>absoluuttista nollapistettä<br>';
   }
 
