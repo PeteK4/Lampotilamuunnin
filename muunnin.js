@@ -124,8 +124,10 @@ function muutaDesimaalit(event) {
 
 // Tulostus
 function tulosta(tyyppi, alkuarvo, muunnos, desit) {
-    const ades = Number(alkuarvo).toFixed(desit); // Aseta desimaalien määrä
-    const des = Number(muunnos).toFixed(desit); // Aseta desimaalien määrä
+    // Aseta desimaalien määrä
+    let alkuarvo_fix = Number(alkuarvo).toFixed(desit); 
+    let muunnos_fix = Number(muunnos).toFixed(desit);
+    // Muunna fontti tulostusta varten
     let txt = document.getElementById("tulosruutu");
     txt.style.color = "#fff";
     txt.style.fontSize = "3em";
@@ -137,21 +139,30 @@ function tulosta(tyyppi, alkuarvo, muunnos, desit) {
 
     // Tulostus muuntotyypin mukaan
     if (tyyppi == "CelsiusFahrenheit") {
-        tulosRuutu.innerHTML = `${ades} &degC<br>=<br>${des} &degF`;
+        tulosRuutu.innerHTML = `${alkuarvo_fix} &degC<br>=<br>${muunnos_fix} &degF`;
     
     } else if (tyyppi == "CelsiusKelvin") {
-        tulosRuutu.innerHTML = `${ades} &degC<br>=<br>${des} K`;
+        tulosRuutu.innerHTML = `${alkuarvo_fix} &degC<br>=<br>${muunnos_fix} K`;
     
     } else if (tyyppi == "FahrenheitCelsius") {
-        tulosRuutu.innerHTML = `${ades} &degF<br>=<br>${des} &degC`;
+        tulosRuutu.innerHTML = `${alkuarvo_fix} &degF<br>=<br>${muunnos_fix} &degC`;
     
     } else if (tyyppi == "FahrenheitKelvin") {
-        tulosRuutu.innerHTML = `${ades} &degF<br>=<br>${des} K`;
+        tulosRuutu.innerHTML = `${alkuarvo_fix} &degF<br>=<br>${muunnos_fix} K`;
 
     } else if (tyyppi == "KelvinCelsius") {
-        tulosRuutu.innerHTML = `${ades} K<br>=<br>${des} &degC`;
+        tulosRuutu.innerHTML = `${alkuarvo_fix} K<br>=<br>${muunnos_fix} &degC`;
 
     } else if (tyyppi == "KelvinFahrenheit") {
-        tulosRuutu.innerHTML = `${ades} K<br>=<br>${des} &degF`;
+        // Kierretään pyöristysongelma ylöspäin -459.7 K, koska lämpötila ei voi olla alle -459.67 K (pyöristys alaspäin -459.67 > -459.6)
+        if (muunnos_fix < -459.67) {
+            muunnos_fix = -459.6;
+        } if (desit == 2) {
+            muunnos_fix = -459.67;
+        }
+        if (desit == 3) {
+            muunnos_fix = "-459.670";
+        }
+        tulosRuutu.innerHTML = `${alkuarvo_fix} K<br>=<br>${muunnos_fix} &degF`;
     }
 }
