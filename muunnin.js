@@ -20,7 +20,7 @@ function muunnaLampotila(){
         let txt = document.getElementById("tulosruutu");
         txt.style.color = "#ffeeaa";
         txt.style.fontSize = "2.4em";
-        tulosRuutu.innerHTML = "Anna lukuarvo.<br>Piste on desimaalierotin."
+        tulosRuutu.innerHTML = "Syöte on virheellinen.<br>Piste toimii desimaalierotimena."
         return;
         }
 
