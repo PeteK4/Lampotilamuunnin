@@ -132,7 +132,7 @@ function tulosta(tyyppi, alkuarvo, muunnos, desit) {
     // Muunna fontti tulostusta varten
     let txt = document.getElementById("tulosruutu");
     txt.style.color = "#fff";
-    txt.style.fontSize = "2.7em";
+    txt.style.fontSize = "2.4em";
     
     if (muunnos == "") {
             tulosRuutu.innerHTML = ""
