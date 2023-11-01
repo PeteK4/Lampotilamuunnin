@@ -102,7 +102,7 @@ function alitus(){
     return teksti = 'Lämpötila ei voi alittaa<br>absoluuttista nollapistettä<br>';
   }
 
-// Seuraa dropdown valikon tapahtumia
+// Muutostyypin valinta dropdown valikosta ja tulostus
 function muutosTyyppi(event) {
     event.preventDefault();
     if (muunnos == "") {
@@ -112,7 +112,7 @@ function muutosTyyppi(event) {
     muunnaLampotila();
 }
 
-// Seuraa radio button osion tapahtumia
+// Desimaalien määrän muutos radio button osiosta ja tulostus
 function muutaDesimaalit(event) {
     event.preventDefault();
     let tyyppi = document.getElementById("tyyppi").value;
