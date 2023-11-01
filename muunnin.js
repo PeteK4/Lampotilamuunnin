@@ -154,12 +154,12 @@ function tulosta(tyyppi, alkuarvo, muunnos, desit) {
 
     } else if (tyyppi == "KelvinFahrenheit") {
         // Kierretään pyöristysongelma ylöspäin -459.7 °F, koska lämpötila ei voi olla alle -459.67 °F (pyöristys alaspäin -459.67 = -459.6)
-        if (muunnos_fix < -459.67) {
+        if (muunnos_fix < -459.67 && desit == 1) {
             muunnos_fix = -459.6;
-        } if (desit == 2) {
+        } if (muunnos_fix < -459.67 &&desit == 2) {
             muunnos_fix = -459.67;
         }
-        if (desit == 3) {
+        if (muunnos_fix < -459.67 && desit == 3) {
             muunnos_fix = "-459.670";
         }
         tulosRuutu.innerHTML = `${alkuarvo_fix} K<br>=<br>${muunnos_fix} &degF`;
