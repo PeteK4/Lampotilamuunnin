@@ -109,20 +109,23 @@ function alitus(){
 // Muutostyypin valinta dropdown valikosta ja tulostus
 function muutosTyyppi(event) {
     event.preventDefault();
-    if (muunnos == "") {
-        tulosRuutu.innerHTML = ""
-    return;
-    }
+    var arvo = document.getElementById("lampotila").value;
+        if (arvo == "") {
+            document.tulosRuutu.innerHTML = ""
+        return;
+        };
     muunnaLampotila();
 }
 
 // Desimaalien määrän muutos radio button osiosta ja tulostus
 function muutaDesimaalit(event) {
     event.preventDefault();
-    let tyyppi = document.getElementById("tyyppi").value;
-    let desit= document.querySelector('input[name = "desit"]:checked').value;
-    let alkuarvo = document.getElementById("lampotila").value;
-    tulosta(tyyppi, alkuarvo, muunnos, desit);
+    var arvo = document.getElementById("lampotila").value;
+        if (arvo == "") {
+            document.tulosRuutu.innerHTML = ""
+        return;
+        };
+    muunnaLampotila();
 }
 
 // Tulostus
