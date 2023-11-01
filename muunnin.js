@@ -94,7 +94,7 @@ function muunnaLampotila(){
     }
 }
 
-// Virheilmotus liian alhaisesta lämpötilasta
+// Virheilmoitus liian alhaisesta lämpötilasta
 function alitus(){
     let txt = document.getElementById("tulosruutu");
     txt.style.color = "#ffeeaa";
