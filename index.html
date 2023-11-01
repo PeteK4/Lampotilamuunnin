@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stl.css">
+    <title>Lämpötilamuunnin</title>
+</head>
+
+<body>
+    <section class="boxi">
+        <h1>Lämpötilamuunnin</h1>
+        <div class="kentat">
+            <select id="tyyppi">
+                <option value="CelsiusFahrenheit">Celsius > Fahrenheit</option>
+                <option value="CelsiusKelvin">Celsius > Kelvin</option>
+                <option value="FahrenheitCelsius">Fahrenheit > Celsius</option>
+                <option value="FahrenheitKelvin">Fahrenheit > Kelvin</option>
+                <option value="KelvinCelsius">Kelvin > Celsius</option>
+                <option value="KelvinFahrenheit">Kelvin > Fahrenheit</option>
+            </select>
+            <br>
+    
+            <p>Anna lämpötila:</p>
+            <input class="kentta" type="text" id="lampotila" autofocus>
+            <button id="arvo"><b>Muunna</b></button>
+
+            <div id="desimaalit">
+                <span>Desimaalit:</span>
+                <input type="radio" id="des1" name="desit" value = 1 checked>
+                <span>1</span>
+                <input type="radio" id="des2" name="desit" value = 2>
+                <span>2</span>
+                <input type="radio" id="des3" name="desit" value = 3>
+                <span>3</span>
+            </div>
+        </div>
+    </section>
+        
+        <div id="tulosruutu"></div>
+    
+    <script src="muunnin.js"></script>
+    <script src="pilvet.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+:root {
+  --boxit: #3ca1ff;
+}
+
+body {
+  background-color: #c8e6ff;
+  font-family: Arial, sans-serif;
+  max-width: 500px;
+  margin: auto;
+  padding: 40px;
+}
+
+.kentat {
+  color: #222;
+  margin-left: 20%;
+}
+
+h1 {
+  color: #fff;
+  font-size: 3em;
+  text-align: center;
+  margin: 20px 0px 30px 0px;
+}
+
+p {
+  color: #fff;
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+
+/* Lämpötilan syöttökenttä */
+.kentta {
+  width: 200px;
+  border: none;
+  border-radius: 5px;
+  padding: 4px;
+  font-size: 1.2em;;
+  height: 25px;
+}
+
+/* Dropdown valikko mistä mihin lämpötila muutetaan */
+#tyyppi{
+  border: none;
+  border-radius: 5px;
+  padding: 4px;
+  font-size: 1.2em;;
+  height: 35px;
+}
+
+/* Radio button valikko desimaalien määrille*/
+#desimaalit {
+  color: #444;
+  font-weight: bold;
+  padding: 5px 10px;
+  margin: 20px 165px 10px 0px;
+  border-radius: 15px;
+  background-color: #67b5ff;;
+}
+
+/* Muutetaan kursorin muoto */
+button, #tyyppi, input[type=radio]:hover{
+    cursor: pointer;
+  }
+
+button {
+  background-color: #aeecff;
+  border-color: #ffffff;
+  border-style:solid;
+  border-radius: 15px;
+  margin-left: 20px;
+  width: 70px;
+  height: 30px;
+}
+
+/* Lämpötilojen kysely */
+.boxi {
+  background-color: var(--boxit);
+  padding: 5px 0px 2cap 0px;
+  border-radius: 55px;
+}
+
+/* Lämpötilojen tulostus */
+#tulosruutu {
+  line-height: 1.2em;
+  background-color: var(--boxit);
+  border-radius: 55px;
+  padding-top: 15px;
+  margin-top: 20px;
+  width: 100%;
+  height: 190px;
+  text-align: center;
+}
+
+/* Mobiili */
+
+@media (min-width: 576px) and (max-width: 768px) {
+
+  body {
+    max-width: 1920px;
+  }
+  
+  .boxi {
+    padding: 5px;
+    border-radius: 15px;
+  }
+  
+  #tulosruutu {
+    border-radius: 15px;
+  }
+
+  #desimaalit {
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #6f8ca7;;
+  }
+}
+
+@media (max-width: 576px) {
+
+  body { 
+    padding: 5px;
+  }
+
+  h1 {
+    font-size: 2.15em;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .boxi {
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  #tulosruutu {
+    border-radius: 5px;
+    margin-top: 10px;
+    height: 240px;
+  }
+
+  #desimaalit {
+    padding: 10px;
+    margin: 10px 80px 10px 0px;
+    border-radius: 15px;
+    background-color: #6f8ca7;;
+  }
+}
