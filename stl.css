@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: #c8e6ff;
+  background-image: linear-gradient(90deg, #a5cbeb  20%, #d1eaff, #a5cbeb 80%);
   font-family: Arial, sans-serif;
   max-width: 500px;
   margin: auto;
@@ -83,12 +83,14 @@ button:hover {
   background-color: var(--boxit);
   padding: 5px 0px 2cap 0px;
   border-radius: 55px;
+  box-shadow: 0px 10px 10px #8caac2;
 }
 
 /* Lämpötilojen tulostus */
 #tulosruutu {
   line-height: 1.2em;
   background-color: var(--boxit);
+  box-shadow: 0px 10px 10px #8caac2;
   border-radius: 55px;
   padding-top: 15px;
   margin-top: 20px;
@@ -112,6 +114,7 @@ button:hover {
   
   #tulosruutu {
     border-radius: 15px;
+    box-shadow: 0px 2px 5px #8caac2;
   }
 
   #desimaalit {
@@ -135,12 +138,15 @@ button:hover {
   .boxi {
     padding: 5px;
     border-radius: 5px;
+    box-shadow: 0px 2px 5px #8caac2;
   }
 
   #tulosruutu {
+
     border-radius: 5px;
     margin-top: 10px;
     height: 240px;
+    box-shadow: 0px 2px 5px #8caac2;
   }
 
   #desimaalit {
