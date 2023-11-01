@@ -19,8 +19,8 @@ function muunnaLampotila(){
     if (arvo == "" || isNaN(arvo)) {
         let txt = document.getElementById("tulosruutu");
         txt.style.color = "#ffeeaa";
-        txt.style.fontSize = "2.4em";
-        tulosRuutu.innerHTML = "Syöte on virheellinen.<br>Piste toimii desimaalierotimena."
+        txt.style.fontSize = "2.25em";
+        tulosRuutu.innerHTML = "Syöte on virheellinen.<br>Anna lukuarvo.<br>Piste toimii desimaalierotimena."
         return;
         }
 
