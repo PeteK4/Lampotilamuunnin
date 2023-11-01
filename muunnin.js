@@ -153,7 +153,7 @@ function tulosta(tyyppi, alkuarvo, muunnos, desit) {
         tulosRuutu.innerHTML = `${alkuarvo_fix} K<br>=<br>${muunnos_fix} &degC`;
 
     } else if (tyyppi == "KelvinFahrenheit") {
-        // Kierretään pyöristysongelma ylöspäin -459.7 K, koska lämpötila ei voi olla alle -459.67 K (pyöristys alaspäin -459.67 > -459.6)
+        // Kierretään pyöristysongelma ylöspäin -459.7 °F, koska lämpötila ei voi olla alle -459.67 °F (pyöristys alaspäin -459.67 = -459.6)
         if (muunnos_fix < -459.67) {
             muunnos_fix = -459.6;
         } if (desit == 2) {
