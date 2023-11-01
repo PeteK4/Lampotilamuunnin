@@ -6,7 +6,7 @@ let muunnos = document.getElementById("lampotila").value;
 tyyppi.addEventListener("change", muutosTyyppi); 
 arvo.addEventListener("click", muunnaLampotila);
 desimaalit.addEventListener("change", muutaDesimaalit);
-lampotila.addEventListener('keyup', function(event){
+lampotila.addEventListener('keydown', function(event){
     if (event.keyCode == 13) {muunnaLampotila();}});
 
 // Pääohjelma
