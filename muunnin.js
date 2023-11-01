@@ -109,10 +109,8 @@ function alitus(){
 // Muutostyypin valinta dropdown valikosta ja tulostus
 function muutosTyyppi(event) {
     event.preventDefault();
-    var arvo = document.getElementById("lampotila").value;
-        if (arvo == "") {
-            document.tulosRuutu.innerHTML = ""
-        return;
+        if (document.getElementById("lampotila").value == "") {
+            return;
         };
     muunnaLampotila();
 }
@@ -120,10 +118,8 @@ function muutosTyyppi(event) {
 // Desimaalien määrän muutos radio button osiosta ja tulostus
 function muutaDesimaalit(event) {
     event.preventDefault();
-    var arvo = document.getElementById("lampotila").value;
-        if (arvo == "") {
-            document.tulosRuutu.innerHTML = ""
-        return;
+        if (document.getElementById("lampotila").value== "") {
+            return;
         };
     muunnaLampotila();
 }
